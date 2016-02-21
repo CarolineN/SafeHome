@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="info.androidhive.materialtabs.fragments.OneFragment">
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/nameTextView"
+        android:hint="Name"
+
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="47dp"
+        android:layout_alignLeft="@+id/emailTextView"
+        android:layout_alignStart="@+id/emailTextView"
+        android:layout_alignRight="@+id/emailTextView"
+        android:layout_alignEnd="@+id/emailTextView" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/emailTextView"
+        android:hint="Email"
+        android:inputType="textEmailAddress"
+        android:layout_below="@+id/nameTextView"
+        android:layout_alignLeft="@+id/phoneTextView"
+        android:layout_alignStart="@+id/phoneTextView"
+        android:layout_alignRight="@+id/phoneTextView"
+        android:layout_alignEnd="@+id/phoneTextView" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="phone"
+        android:ems="10"
+        android:id="@+id/phoneTextView"
+        android:hint="Phone"
+        android:layout_below="@+id/emailTextView"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Submit"
+        android:id="@+id/EnterDetailsButton"
+        android:onClick="onClick"
+        android:background="#040304"
+        android:textColor="#fcfcfc"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="99dp"
+        android:layout_centerVertical="true" />
+
+
+</RelativeLayout>
