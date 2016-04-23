@@ -1,123 +1,101 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
-    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    tools:context="com.example.caroline.safehome.firstPage"
-    android:background="#FFFFFF">
+<android.support.v4.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#575959">
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/buttonLocation"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:background="@android:color/black"
-        android:onClick="location"
-        android:text="Where am I?"
-        android:textColor="#ffffff"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="215dp"
+        android:orientation="horizontal"
+        android:layout_weight="1.00"
+        android:background="#575959">
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Start Journey"
-        android:id="@+id/button3"
-        android:textColor="#ffffff"
-        android:background="@android:color/black"
-        android:layout_below="@+id/buttonLocation"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_alignRight="@+id/buttonLocation"
-        android:layout_alignEnd="@+id/buttonLocation"
-        android:onClick="journey"/>
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="230dp"
+            android:src="@drawable/noty"
+            android:background="#575959"
+            android:tint="#9cfa94"
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Panic"
-        android:id="@+id/panicButton"
-        android:background="#040404"
-        android:textColor="#ff0905"
-        android:onClick="playMusic"
-        android:layout_gravity="bottom"
-        android:layout_above="@+id/okButton"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="I&apos;m OK"
-        android:id="@+id/okButton"
-        android:background="#040404"
-        android:textColor="#78ff50"
-        android:onClick="stopMusic"
-        android:layout_gravity="bottom"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_alignRight="@+id/panicButton"
-        android:layout_alignEnd="@+id/panicButton" />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Emergency Contacts"
-        android:id="@+id/button2"
-        android:textColor="#ffffff"
-        android:background="@android:color/black"
-        android:layout_below="@+id/button3"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_alignRight="@+id/button3"
-        android:layout_alignEnd="@+id/button3" />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Send Message"
-        android:id="@+id/button4"
-        android:layout_below="@+id/button2"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_alignRight="@+id/button2"
-        android:layout_alignEnd="@+id/button2"
-        android:background="@android:color/black"
-        android:textColor="#ffffff" />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Add Followers"
-        android:id="@+id/button5"
-        android:layout_below="@+id/button4"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:textColor="#ffffff"
-        android:background="@android:color/black"
-        android:onClick="followers"/>
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="My Followers"
-        android:id="@+id/button6"
-        android:layout_below="@+id/button5"
-        android:background="@android:color/black"
-        android:textColor="#ffffff"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:onClick="myFollowers"/>
+            android:onClick="notification"
+            android:padding="1dp" />
 
 
-</RelativeLayout>
+        <ImageButton
+            android:layout_width="0dip"
+            android:layout_height="230dp"
+            android:layout_weight="0.92"
+            android:src="@drawable/location"
+            android:background="#575959"
+            android:onClick="location"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="215dp"
+        android:orientation="horizontal"
+        android:layout_weight="1.00"
+        android:background="#575959">
+
+        <ImageButton
+            android:layout_width="0dip"
+            android:layout_height="230dp"
+            android:layout_weight="1"
+            android:src="@drawable/journey1"
+            android:background="#575959"
+            android:onClick="journey"/>
+
+        <ImageButton
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:src="@drawable/mess"
+            android:background="#575959"
+            android:onClick="messages"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="215dp"
+        android:orientation="horizontal"
+        android:layout_weight="14.89"
+        android:background="#575959">
+
+        <ImageButton
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:src="@drawable/followers"
+            android:background="#575959"
+            android:onClick="followers"/>
+
+        <ImageButton
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:src="@drawable/person"
+            android:background="#575959"
+            android:onClick="emergency"/>
+    </LinearLayout>
+</LinearLayout>
+    </ScrollView>
+
+<ListView
+android:id="@+id/navList"
+android:layout_width="200dp"
+android:layout_height="match_parent"
+android:layout_gravity="left|start"
+    android:background="#b9b9b6"
+    android:divider="#FFFFFF"
+   />
+</android.support.v4.widget.DrawerLayout>

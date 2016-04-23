@@ -1,3 +1,11 @@
+<android.support.v4.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -14,7 +22,7 @@
             android:id="@+id/btn_find"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="find"
+            android:text="OK"
             android:background="#040304"
             android:textColor="#fcfcfc"
             android:layout_alignParentRight="true"
@@ -25,7 +33,6 @@
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:inputType="text"
-            android:hint="destination"
             android:layout_toLeftOf="@id/btn_find" />
 
     </RelativeLayout>
@@ -44,3 +51,12 @@
         class="com.google.android.gms.maps.SupportMapFragment" />
 
 </LinearLayout>
+<ListView
+android:id="@+id/navList"
+android:layout_width="200dp"
+android:layout_height="match_parent"
+android:layout_gravity="left|start"
+android:background="#000000"
+android:divider="#FFFFFF"
+android:dividerHeight="0.5px"/>
+</android.support.v4.widget.DrawerLayout>

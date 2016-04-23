@@ -7,22 +7,28 @@
     android:paddingTop="@dimen/activity_vertical_margin" tools:context=".LoginActivity"
     android:background="#9bd2c8"
     android:descendantFocusability="beforeDescendants"
-    android:focusableInTouchMode="true"
-    android:weightSum="1">
+    android:focusableInTouchMode="true">
 
     <LinearLayout
         android:id="@+id/ll1"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="132dp"
         android:gravity="center_vertical|center_horizontal"
         android:weightSum="1">
-
         <ImageView
-            android:layout_width="200dp"
-            android:layout_height="200dp"
-            android:background="@drawable/emerg"
-            android:layout_weight="0.41" />
+            android:layout_width="160dp"
+            android:layout_height="152dp"
+            android:background="@drawable/d"
+            android:layout_weight="0.13" />
 
+        <!--<TextView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:textAppearance="?android:attr/textAppearanceLarge"-->
+        <!--android:text="Safe Home"-->
+        <!--android:id="@+id/textView2"-->
+        <!--android:textSize="30dp"-->
+        <!--android:textColor="#ffffffff" />-->
 
 
     </LinearLayout>
@@ -30,7 +36,8 @@
     <LinearLayout
         android:id="@+id/ll2"
         android:layout_width="match_parent"
-        android:layout_height="267dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
         android:gravity="center_vertical|center_horizontal">
 
         <ProgressBar android:id="@+id/login_progress" style="?android:attr/progressBarStyleLarge"
@@ -43,8 +50,8 @@
                 android:layout_height="wrap_content" android:orientation="vertical">
 
                 <AutoCompleteTextView android:id="@+id/nameTextView" android:layout_width="match_parent"
-                    android:layout_height="wrap_content" android:hint="name"
-                    android:inputType="textEmailAddress" android:maxLines="1"
+                    android:layout_height="wrap_content" android:hint="username"
+                    android:maxLines="1"
                     android:singleLine="true"
                     android:layout_marginBottom="10dp"
                     android:textColorHint="#ffffffff"
@@ -52,6 +59,15 @@
 
                 <EditText android:id="@+id/emailTextView" android:layout_width="match_parent"
                     android:layout_height="wrap_content" android:hint="email"
+                    android:imeActionLabel="Sign In"
+                    android:imeOptions="actionUnspecified"
+                    android:inputType="textEmailAddress"
+                    android:maxLines="1" android:singleLine="true"
+                    android:layout_marginBottom="10dp"
+                    android:textColorHint="#ffffffff"
+                    android:textColor="#ffffffff" />
+                <EditText android:id="@+id/HomeTextView" android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:hint="address"
                     android:imeActionLabel="Sign In"
                     android:imeOptions="actionUnspecified"
                     android:maxLines="1" android:singleLine="true"
@@ -66,11 +82,18 @@
                     android:layout_marginBottom="10dp"
                     android:textColorHint="#ffffffff"
                     android:textColor="#ffffffff" />
-
+                <EditText android:id="@+id/passwordTextView" android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:hint="password"
+                    android:imeActionLabel="Sign In"
+                    android:imeOptions="actionUnspecified" android:inputType="textPassword"
+                    android:maxLines="1" android:singleLine="true"
+                    android:layout_marginBottom="10dp"
+                    android:textColorHint="#ffffffff"
+                    android:textColor="#ffffffff" />
 
                 <Button android:id="@+id/email_sign_in_button" style="?android:textAppearanceSmall"
                     android:layout_width="match_parent" android:layout_height="40dp"
-                    android:layout_marginTop="16dp" android:text="save"
+                    android:layout_marginTop="16dp" android:text="Sign Up"
                     android:textStyle="bold"
                     android:textColor="#ffffffff"
                     android:background="#184e58"
@@ -81,5 +104,20 @@
 
     </LinearLayout>
 
+    <LinearLayout
+        android:id="@+id/ll3"
+        android:layout_width="match_parent"
+        android:layout_height="26dp"
+        android:gravity="bottom|center_horizontal">
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Login"
+            android:id="@+id/signUpTextView"
+            android:autoLink="web"
+            android:onClick="login"
+            android:textColor="#ffffffff"
+            android:textStyle="bold" />
+    </LinearLayout>
 </LinearLayout>
